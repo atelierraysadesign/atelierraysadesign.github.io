@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>ATELIER RAYSA DESIGN SRL</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Atelier de producție vestimentară cut and sew pentru branduri de modă, designeri independenți și companii din România. Serii mici, prototipuri și capsule premium.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html {
+scroll-behavior: smooth;
+}
+body {
+font-family: "Montserrat", sans-serif;
+background-color: #f2f0ee;
+color: #111111;
+line-height: 1.6;
+}
+a {
+text-decoration: none;
+color: inherit;
+}
+img {
+max-width: 100%;
+display: block;
+}
+header {
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 100;
+background-color: #050505;
+color: #f7f3ef;
+}
+.header-inner {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 18px 30px;
+}
+.logo {
+display: flex;
+align-items: center;
+font-family: "Playfair Display", serif;
+font-size: 26px;
+letter-spacing: 0.12em;
+}
+.logo span {
+display: inline-block;
+padding-right: 4px;
+}
+.logo-mark {
+display: inline-block;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background: #f5a623;
+margin-left: 8px;
+}
+nav ul {
+display: flex;
+gap: 30px;
+list-style: none;
+font-size: 13px;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+}
+nav a {
+position: relative;
+padding-bottom: 4px;
+}
+nav a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 0;
+height: 2px;
+background: #f5a623;
+transition: width 0.3s ease;
+}
+nav a:hover::after {
+width: 100%;
+}
+.menu-cta {
+padding: 8px 18px;
+border-radius: 24px;
+border: 1px solid #f5a623;
+font-size: 12px;
+transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.menu-cta:hover {
+background: #f5a623;
+color: #050505;
+transform: translateY(-1px);
+}
+.main-wrapper {
+padding-top: 90px;
+}
+.section {
+max-width: 1200px;
+margin: 0 auto;
+padding: 80px 30px;
+position: relative;
+}
+.section-light {
+background-color: #f2f0ee;
+}
+.section-soft {
+background-color: #f7f3ef;
+}
+.section-contrast {
+background-color: #111111;
+color: #f7f3ef;
+}
+.section-title {
+font-family: "Playfair Display", serif;
+font-size: 32px;
+letter-spacing: 0.24em;
+text-transform: uppercase;
+margin-bottom: 18px;
+}
+.section-kicker {
+font-size: 13px;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: #a58c6a;
+margin-bottom: 10px;
+}
+.section-subtitle {
+font-size: 15px;
+max-width: 520px;
+margin-bottom: 30px;
+}
+.hero {
+display: grid;
+grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr);
+gap: 60px;
+align-items: center;
+}
+.hero-left {
+position: relative;
+padding-top: 40px;
+}
+.hero-tagline {
+font-size: 13px;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: #b6aaa0;
+margin-bottom: 14px;
+}
+.hero-heading {
+font-family: "Playfair Display", serif;
+font-size: 50px;
+line-height: 1.06;
+letter-spacing: 0.28em;
+text-transform: uppercase;
+margin-bottom: 22px;
+}
+.hero-subheading {
+font-size: 15px;
+max-width: 420px;
+margin-bottom: 30px;
+}
+.hero-highlight {
+font-weight: 600;
+}
+.hero-label {
+position: absolute;
+top: 0;
+left: 0;
+font-family: "Playfair Display", serif;
+font-size: 120px;
+letter-spacing: 0.28em;
+text-transform: uppercase;
+color: rgba(200, 190, 180, 0.24);
+pointer-events: none;
+user-select: none;
+}
+.hero-cta-row {
+display: flex;
+flex-wrap: wrap;
+gap: 16px;
+margin-bottom: 20px;
+}
+.btn-main {
+padding: 12px 26px;
+border-radius: 30px;
+border: none;
+background: #111111;
+color: #f7f3ef;
+font-size: 13px;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+cursor: pointer;
+transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-main:hover {
+background: #f5a623;
+color: #111111;
+transform: translateY(-2px);
+box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+}
+.btn-ghost {
+padding: 12px 26px;
+border-radius: 30px;
+border: 1px solid #d3c5b8;
+background: transparent;
+color: #111111;
+font-size: 13px;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+cursor: pointer;
+transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+.btn-ghost:hover {
+background: #f7f3ef;
+border-color: #111111;
+transform: translateY(-2px);
+}
+.hero-meta {
+font-size: 12px;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: #77716b;
+}
+.hero-right {
+position: relative;
+}
+.hero-image-wrapper {
+position: relative;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 26px 40px rgba(0, 0, 0, 0.25);
+}
+.hero-image {
+height: 420px;
+background-image: url("https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1300&q=80");
+background-position: center;
+background-size: cover;
+transform: scale(1.02);
+transition: transform 1.2s ease;
+}
+.hero-image-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(135deg, rgba(5, 5, 5, 0.35), rgba(0, 0, 0, 0.05));
+}
+.hero-image-wrapper:hover .hero-image {
+transform: scale(1.06);
+}
+.hero-badge {
+position: absolute;
+bottom: 18px;
+left: 18px;
+background: rgba(242, 240, 238, 0.9);
+padding: 10px 18px;
+border-radius: 30px;
+font-size: 11px;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.hero-dot {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: #f5a623;
+}
+.hero-badge span {
+opacity: 0.9;
+}
+.hero-floating-card {
+position: absolute;
+top: 30px;
+right: -20px;
+background: #f7f3ef;
+border-radius: 14px;
+padding: 18px 20px;
+box-shadow: 0 20px 32px rgba(0, 0, 0, 0.18);
+max-width: 220px;
+font-size: 12px;
+}
+.hero-floating-label {
+font-size: 11px;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: #b09373;
+margin-bottom: 8px;
+}
+.hero-floating-title {
+font-family: "Playfair Display", serif;
+font-size: 18px;
+margin-bottom: 6px;
+}
+.hero-floating-text {
+font-size: 12px;
+color: #4a4038;
+margin-bottom: 8px;
+}
+.hero-floating-meta {
+font-size: 11px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+color: #94806c;
+}
+.about-grid {
+display: grid;
+grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+gap: 60px;
+align-items: flex-start;
+}
+.about-text {
+font-size: 15px;
+}
+.about-text p {
+margin-bottom: 16px;
+}
+.about-highlight {
+font-weight: 600;
+}
+.about-tag {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 6px 14px;
+border-radius: 999px;
+border: 1px solid #d3c5b8;
+font-size: 11px;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+margin-bottom: 14px;
+}
+.about-tag-dot {
+width: 7px;
+height: 7px;
+border-radius: 50%;
+background: #f5a623;
+}
+.about-facts {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 16px;
+font-size: 12px;
+}
+.about-fact {
+border-radius: 12px;
+border: 1px solid #e3d9cf;
+padding: 14px 14px 12px;
+background: rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(4px);
+}
+.about-fact-number {
+font-family: "Playfair Display", serif;
+font-size: 20px;
+margin-bottom: 4px;
+}
+.about-fact-label {
+text-transform: uppercase;
+letter-spacing: 0.16em;
+font-size: 11px;
+color: #7d6c5c;
+}
+.about-image-block {
+display: grid;
+gap: 18px;
+}
+.about-photo-large {
+border-radius: 14px;
+overflow: hidden;
+height: 260px;
+background-image: url("https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1100&q=80");
+background-size: cover;
+background-position: center;
+position: relative;
+}
+.about-photo-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(180deg, rgba(5, 5, 5, 0.15), rgba(5, 5, 5, 0.4));
+}
+.about-photo-caption {
+position: absolute;
+bottom: 16px;
+left: 18px;
+color: #f7f3ef;
+font-size: 12px;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+}
+.about-strip {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 12px;
+}
+.about-strip-item {
+border-radius: 12px;
+border: 1px solid #e3d9cf;
+padding: 12px 14px;
+background-color: #fdfaf8;
+font-size: 12px;
+}
+.services-intro {
+margin-bottom: 36px;
+max-width: 600px;
+font-size: 15px;
+}
+.services-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 26px;
+}
+.service-card {
+border-radius: 16px;
+background: #fdfaf8;
+border: 1px solid #e4d8cc;
+padding: 22px 20px 26px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+min-height: 260px;
+transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.service-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 16px 32px rgba(0, 0, 0, 0.16);
+border-color: #d6c1a9;
+}
+.service-label {
+font-size: 11px;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: #b09373;
+margin-bottom: 10px;
+}
+.service-title {
+font-family: "Playfair Display", serif;
+font-size: 20px;
+margin-bottom: 10px;
+}
+.service-text {
+font-size: 14px;
+margin-bottom: 12px;
+}
+.service-meta {
+font-size: 11px;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+color: #7d6c5c;
+margin-bottom: 10px;
+}
+.service-cta {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+font-size: 11px;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+}
+.service-cta span {
+display: inline-block;
+transition: transform 0.2s ease;
+}
+.service-card:hover .service-cta span {
+transform: translateX(4px);
+}
+.service-arrow {
+font-size: 12px;
+}
+.advantages-wrapper {
+display: grid;
+grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
+gap: 40px;
+align-items: flex-start;
+}
+.advantages-list {
+display: grid;
+grid-template-columns: 1fr;
+gap: 22px;
+}
+.advantage-item {
+border-radius: 14px;
+border: 1px solid rgba(244, 234, 219, 0.4);
+padding: 18px 20px 20px;
+background: rgba(17, 17, 17, 0.84);
+backdrop-filter: blur(4px);
+}
+.advantage-title {
+font-family: "Playfair Display", serif;
+font-size: 20px;
+margin-bottom: 8px;
+}
+.advantage-text {
+font-size: 14px;
+color: #f2eae1;
+}
+.advantage-badge-row {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-top: 14px;
+font-size: 11px;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+color: #f5a623;
+}
+.advantage-badge {
+padding: 5px 10px;
+border-radius: 14px;
+border: 1px solid rgba(245, 166, 35, 0.6);
+}
+.advantages-side {
+border-radius: 20px;
+border: 1px solid rgba(244, 234, 219, 0.3);
+padding: 24px 22px 26px;
+background: radial-gradient(circle at top left, rgba(245, 166, 35, 0.16), rgba(0, 0, 0, 0.9));
+}
+.advantages-side-title {
+font-family: "Playfair Display", serif;
+font-size: 22px;
+margin-bottom: 10px;
+}
+.advantages-side-text {
+font-size: 14px;
+color: #f2eae1;
+margin-bottom: 16px;
+}
+.advantages-side-meta {
+font-size: 11px;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: #f5a623;
+margin-bottom: 16px;
+}
+.advantages-side-list {
+font-size: 13px;
+list-style: none;
+margin-bottom: 18px;
+}
+.advantages-side-list li {
+margin-bottom: 8px;
+padding-left: 14px;
+position: relative;
+}
+.advantages-side-list li::before {
+content: "•";
+position: absolute;
+left: 0;
+top: 0;
+color: #f5a623;
+}
+.process-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 22px;
+margin-top: 30px;
+}
+.process-card {
+border-radius: 18px;
+border: 1px solid #e5d9cc;
+padding: 22px 20px 24px;
+background: #fdfaf8;
+position: relative;
+overflow: hidden;
+}
+.process-step {
+position: absolute;
+top: -16px;
+right: -6px;
+font-family: "Playfair Display", serif;
+font-size: 60px;
+color: rgba(210, 190, 170, 0.28);
+}
+.process-label {
+font-size: 11px;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: #b09373;
+margin-bottom: 10px;
+}
+.process-title {
+font-family: "Playfair Display", serif;
+font-size: 20px;
+margin-bottom: 10px;
+}
+.process-text {
+font-size: 14px;
+margin-bottom: 12px;
+}
+.process-meta {
+font-size: 12px;
+color: #7d6c5c;
+}
+.contact-cta-wrapper {
+display: grid;
+grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
+gap: 40px;
+align-items: center;
+}
+.contact-phrases {
+font-size: 15px;
+}
+.contact-phrases p {
+margin-bottom: 14px;
+}
+.contact-highlights {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 14px;
+margin-top: 8px;
+font-size: 13px;
+}
+.contact-highlight {
+border-radius: 14px;
+border: 1px solid #e3d9cf;
+padding: 12px 14px;
+background: #fdfaf8;
+}
+.contact-actions {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 18px;
+}
+.contact-actions-note {
+font-size: 12px;
+color: #7d6c5c;
+max-width: 360px;
+}
+.contact-mini-row {
+display: flex;
+flex-wrap: wrap;
+gap: 12px;
+font-size: 12px;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+color: #7d6c5c;
+}
+.contact-mini-tag {
+padding: 4px 10px;
+border-radius: 14px;
+border: 1px solid #d3c5b8;
+}
+.footer {
+background-color: #050505;
+color: #f7f3ef;
+padding: 26px 30px 24px;
+}
+.footer-inner {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+gap: 16px;
+font-size: 12px;
+}
+.footer-logo {
+font-family: "Playfair Display", serif;
+font-size: 22px;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.footer-logo span {
+display: inline-block;
+}
+.footer-nav {
+display: flex;
+flex-wrap: wrap;
+gap: 18px;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+}
+.footer-contact {
+font-size: 12px;
+line-height: 1.5;
+}
+.footer-contact a {
+text-decoration: underline;
+text-decoration-thickness: 1px;
+text-underline-offset: 3px;
+}
+.social-row {
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 11px;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+}
+.social-icons {
+display: flex;
+gap: 8px;
+}
+.social-icon {
+width: 26px;
+height: 26px;
+border-radius: 50%;
+border: 1px solid #f7f3ef;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+font-size: 12px;
+transition: background 0.3s ease, color 0.3s ease;
+}
+.social-icon:hover {
+background: #f5a623;
+color: #111111;
+}
+.modal-overlay {
+position: fixed;
+inset: 0;
+background: rgba(0, 0, 0, 0.6);
+display: none;
+align-items: center;
+justify-content: center;
+z-index: 200;
+padding: 20px;
+}
+.modal {
+background: #f7f3ef;
+border-radius: 18px;
+max-width: 520px;
+width: 100%;
+padding: 28px 26px 24px;
+position: relative;
+box-shadow: 0 18px 38px rgba(0, 0, 0, 0.3);
+}
+.modal-header {
+margin-bottom: 18px;
+}
+.modal-kicker {
+font-size: 11px;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: #b09373;
+margin-bottom: 8px;
+}
+.modal-title {
+font-family: "Playfair Display", serif;
+font-size: 24px;
+margin-bottom: 4px;
+}
+.modal-subtitle {
+font-size: 13px;
+color: #7d6c5c;
+}
+.modal-close {
+position: absolute;
+top: 16px;
+right: 18px;
+width: 32px;
+height: 32px;
+border-radius: 16px;
+border: 1px solid #d3c5b8;
+background: transparent;
+cursor: pointer;
+font-size: 16px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: background 0.2s ease, transform 0.1s ease;
+}
+.modal-close:hover {
+background: #f2e4d5;
+transform: translateY(-1px);
+}
+.form-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 14px 16px;
+margin-bottom: 14px;
+}
+.form-field {
+display: flex;
+flex-direction: column;
+gap: 4px;
+font-size: 13px;
+}
+.form-field label {
+font-size: 12px;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: #7d6c5c;
+}
+.form-input,
+.form-select,
+.form-textarea {
+border-radius: 10px;
+border: 1px solid #d3c5b8;
+padding: 10px 11px;
+font-family: "Montserrat", sans-serif;
+font-size: 13px;
+background: #fdfaf8;
+outline: none;
+transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+border-color: #f5a623;
+box-shadow: 0 0 0 1px rgba(245, 166, 35, 0.5);
+background: #ffffff;
+}
+.form-textarea {
+resize: vertical;
+min-height: 110px;
+}
+.form-full {
+grid-column: 1 / -1;
+}
+.form-footer-row {
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-top: 4px;
+}
+.form-consent {
+display: flex;
+align-items: flex-start;
+gap: 8px;
+font-size: 11px;
+color: #7d6c5c;
+}
+.form-consent input {
+margin-top: 2px;
+}
+.form-note {
+font-size: 11px;
+color: #7d6c5c;
+}
+.modal-success {
+text-align: left;
+}
+.modal-success-icon {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: 1px solid #4caf50;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 22px;
+color: #4caf50;
+margin-bottom: 14px;
+}
+.modal-success-title {
+font-family: "Playfair Display", serif;
+font-size: 22px;
+margin-bottom: 6px;
+}
+.modal-success-text {
+font-size: 14px;
+color: #4a4038;
+margin-bottom: 10px;
+}
+.modal-success-meta {
+font-size: 12px;
+color: #7d6c5c;
+}
+@media (max-width: 1024px) {
+.hero {
+grid-template-columns: minmax(0, 1fr);
+}
+.hero-label {
+font-size: 80px;
+}
+.hero-right {
+order: -1;
+}
+.about-grid {
+grid-template-columns: minmax(0, 1fr);
+}
+.advantages-wrapper {
+grid-template-columns: minmax(0, 1fr);
+}
+.contact-cta-wrapper {
+grid-template-columns: minmax(0, 1fr);
+}
+.services-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+@media (max-width: 768px) {
+.header-inner {
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+}
+nav ul {
+flex-wrap: wrap;
+gap: 14px;
+}
+.hero-heading {
+font-size: 36px;
+letter-spacing: 0.22em;
+}
+.section {
+padding: 70px 18px;
+}
+.about-facts {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.services-grid {
+grid-template-columns: minmax(0, 1fr);
+}
+.process-grid {
+grid-template-columns: minmax(0, 1fr);
+}
+.contact-highlights {
+grid-template-columns: minmax(0, 1fr);
+}
+.form-grid {
+grid-template-columns: minmax(0, 1fr);
+}
+.footer-inner {
+flex-direction: column;
+align-items: flex-start;
+}
+}
+@media (max-width: 480px) {
+.hero-image {
+height: 320px;
+}
+.hero-floating-card {
+display: none;
+}
+.about-facts {
+grid-template-columns: minmax(0, 1fr);
+}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header-inner">
+<div class="logo">
+<span>RAYSA</span>
+<div class="logo-mark"></div>
+</div>
+<nav>
+<ul>
+<li><a href="#acasa">Colecții</a></li>
+<li><a href="#despre">Atelier</a></li>
+<li><a href="#servicii">Servicii</a></li>
+<li><a href="#proces">Proces</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><button class="menu-cta open-contact">Scrie-ne</button></li>
+</ul>
+</nav>
+</div>
+</header>
+<main class="main-wrapper">
+<section id="acasa" class="section section-light">
+<div class="hero">
+<div class="hero-left">
+<div class="hero-label">ATELIER</div>
+div class="hero-tagline">atelier de creație vestimentară b2b</div>
+<h1 class="hero-heading">Raysa Design</h1>
+<p class="hero-subheading">
+<span class="hero-highlight">ATELIER RAYSA DESIGN SRL</span> transformă schițele brandurilor de modă în piese vestimentare perfect croite, realizate în serii mici și capsule flexibile pentru piața europeană.
+</p>
+<div class="hero-cta-row">
+<button class="btn-main open-contact">Planifică un proiect</button>
+<a href="#servicii"><button class="btn-ghost">Vezi serviciile noastre</button></a>
+</div>
+<p class="hero-meta">Producție cut and sew pentru branduri, designeri și companii din Cihei și din întreaga Românie.</p>
+</div>
+<div class="hero-right">
+<div class="hero-image-wrapper">
+<div class="hero-image"></div>
+<div class="hero-image-overlay"></div>
+<div class="hero-badge">
+<div class="hero-dot"></div>
+<span>Linie dedicată pentru colecții capsulă</span>
+</div>
+</div>
+<div class="hero-floating-card">
+<div class="hero-floating-label">studio tehnic</div>
+<div class="hero-floating-title">Mostre gata în 7–10 zile</div>
+<p class="hero-floating-text">Ne conectăm cu echipa ta de design, rafinăm tiparele și testăm materialele înainte de producția finală.</p>
+<div class="hero-floating-meta">modelare, pilot, micro-serii</div>
+</div>
+</div>
+</div>
+</section>
+<section id="despre" class="section section-soft">
+<div class="section-kicker">povestea atelierului</div>
+<h2 class="section-title">Din schiță în garderoba clientului</h2>
+<div class="about-grid">
+<div class="about-text">
+<div class="about-tag">
+<div class="about-tag-dot"></div>
+<span>atelier b2b din cihei</span>
+</div>
+<p>ATELIER RAYSA DESIGN SRL este un studio de producție vestimentară cut and sew situat pe <span class="about-highlight">STR. VIITORULUI NR. 17E, 417498 Cihei</span>, creat pentru branduri care vor control real asupra calității. Lucrăm exclusiv pe bază de proiect, cu briefing clar și termene asumate.</p>
+<p>Combinăm experiența practică în construcția de tipare cu un flux digitalizat de urmărire a comenzilor, astfel încât echipa ta de marketing și design să știe în permanență unde se află fiecare lot.</p>
+<p>Ne concentrăm pe serii mici și medii pentru colecții de podium, capsule comerciale, uniforme corporate și merchandise premium pentru evenimente speciale.</p>
+<p>În atelierul nostru, fiecare detaliu contează: alocăm timp pentru probe, fotografiem mostrele la fiecare iterație și documentăm modificările pentru ca următoarele comenzi să fie și mai eficiente.</p>
+<p>Pentru clienții internaționali, comunicarea are loc în română sau engleză, iar livrările sunt organizate prin parteneri logistici verificați, astfel încât să poți lansa în siguranță colecții pe mai multe piețe.</p>
+<div class="about-facts">
+<div class="about-fact">
+<div class="about-fact-number">12+</div>
+<div class="about-fact-label">branduri active</div>
+</div>
+<div class="about-fact">
+<div class="about-fact-number">8500+</div>
+<div class="about-fact-label">piese livrate anual</div>
+</div>
+<div class="about-fact">
+<div class="about-fact-number">Încredere</div>
+<div class="about-fact-label">Ani de producție stabilă</div>
+</div>
+</div>
+</div>
+<div class="about-image-block">
+<div class="about-photo-large">
+<div class="about-photo-overlay"></div>
+<div class="about-photo-caption">Linie de coasere dedicată prototipurilor</div>
+</div>
+<div class="about-strip">
+<div class="about-strip-item">Lucrăm cu materiale diverse, de la denim gros și stofe de lână, până la mătase, viscose fluide și tricotaje subțiri.</div>
+<div class="about-strip-item">Fiecare proiect are un responsabil tehnic care coordonează tiparele, probele și comunicarea cu echipa ta.</div>
+</div>
+</div>
+</div>
+</section>
+<section id="servicii" class="section section-light">
+<div class="section-kicker">ce facem concret</div>
+<h2 class="section-title">Servicii tailor-made pentru branduri</h2>
+<p class="services-intro">Ne poziționăm ca partener tehnic de încredere pentru branduri și companii care vor produse textile bine gândite, nu doar executate. Mai jos sunt principalele noastre linii de servicii, fiecare putând fi adaptată la specificul colecției tale.</p>
+<div class="services-grid">
+<div class="service-card">
+<div>
+<div class="service-label">de la idee la primul exemplar</div>
+<h3 class="service-title">Dezvoltare de prototip și mostre</h3>
+<p class="service-text">Pornim de la fișiere tehnice, schițe sau chiar moodboard-uri și le transformăm în produse testabile. Construim tipare digitale, alegem împreună materiale fezabile și realizăm primul set de mostre cu detalii de finisaj clar documentate.</p>
+<p class="service-text">Fiecare probă este fotografiată pe manechin sau model, cu notițe despre ajustări de croi și proporții, astfel încât echipa ta creativă să poată decide rapid direcția finală.</p>
+<p class="service-meta">ideal pentru lansarea de colecții noi sau extinderea liniilor existente</p>
+</div>
+<a href="#contact" class="service-cta">
+<span>Programează sesiunea de mostre</span>
+<span class="service-arrow">↗</span>
+</a>
+</div>
+<div class="service-card">
+<div>
+<div class="service-label">serii mici și medii</div>
+<h3 class="service-title">Producție capsulă cut and sew</h3>
+<p class="service-text">După validarea mostrelor, trecem la producție în loturi flexibile, între câteva zeci și câteva sute de bucăți per model. Optimizăm consumul de material, planificăm etapele de croi și coasere și urmărim fiecare serie în sistem intern.</p>
+<p class="service-text">Controlăm calitatea la fiecare pas, de la tăiere și asamblare până la etichetare și împachetare, astfel încât produsele să ajungă gata de livrare către magazine sau direct la clientul final.</p>
+<p class="service-meta">croi precis, finisaje curate, termene clare de livrare</p>
+</div>
+<a href="#proces" class="service-cta">
+<span>Vezi cum lucrăm</span>
+<span class="service-arrow">↗</span>
+</a>
+</div>
+<div class="service-card">
+<div>
+<div class="service-label">soluții pentru business</div>
+<h3 class="service-title">Uniforme corporate și merchandise</h3>
+<p class="service-text">Creăm uniforme și capsule promoționale pentru companii care vor să fie recunoscute printr-o imagine coerentă. Propunem croieli adaptate poziției în companie, testăm rezistența materialelor și optimizăm seriile pentru re-comenzi rapide.</p>
+<p class="service-text">De la cămăși și rochii office până la hanorace, șorțuri de barista sau piese pentru evenimente speciale, ne asigurăm că designul respectă brand book-ul și că angajații se simt confortabil în fiecare zi.</p>
+<p class="service-meta">soluții b2b pentru retail, horeca, clinică, educație și evenimente</p>
+</div>
+<button class="btn-ghost open-contact">Cere o ofertă personalizată</button>
+</div>
+</div>
+</section>
+<section class="section section-contrast">
+<div class="section-kicker">de ce merită parteneriatul</div>
+<h2 class="section-title">Trei motive să alegi atelierul nostru</h2>
+<div class="advantages-wrapper">
+<div class="advantages-list">
+<div class="advantage-item">
+<h3 class="advantage-title">Transparență totală asupra producției</h3>
+<p class="advantage-text">Lucrăm cu fișe tehnice clare, checklist-uri de control și rapoarte de status trimiși periodic. Vezi câte bucăți au intrat în croi, câte sunt în coasere și cât este termenul estimat de finalizare pentru fiecare model din colecție.</p>
+<div class="advantage-badge-row">
+<div class="advantage-badge">rapoarte regulate</div>
+<div class="advantage-badge">foto din atelier</div>
+</div>
+</div>
+<div class="advantage-item">
+<h3 class="advantage-title">Standard premium, adaptat bugetului</h3>
+<p class="advantage-text">Propunem variante de construcție a produselor în funcție de bugetul și poziționarea brandului tău. Poți alege între finisaje couture pentru linii de podium sau opțiuni optimizate pentru retail cu volum mai mare, fără să sacrifici calitatea.</p>
+<div class="advantage-badge-row">
+<div class="advantage-badge">calitate constantă</div>
+<div class="advantage-badge">costuri controlate</div>
+</div>
+</div>
+<div class="advantage-item">
+<h3 class="advantage-title">Echipă mică, comunicare rapidă</h3>
+<p class="advantage-text">Nu ești preluat de un call-center sau de un sistem impersonal de tickete. Ai un contact direct de proiect care răspunde la întrebări, trimite actualizări și ajustează împreună cu tine calendarul în funcție de lansările planificate.</p>
+<div class="advantage-badge-row">
+<div class="advantage-badge">contact unic</div>
+<div class="advantage-badge">răspuns în 24h</div>
+</div>
+</div>
+</div>
+<div class="advantages-side">
+<div class="advantages-side-title">Partener de producție, nu doar furnizor</div>
+<p class="advantages-side-text">Când lucrăm împreună, ne uităm la colecție din perspectiva întregului business: storytelling de brand, sezonalitate, canale de vânzare și feedback din colecțiile trecute.</p>
+<div class="advantages-side-meta">cum te ajutăm să lansezi colecții mai bune</div>
+<ul class="advantages-side-list">
+<li>Optimizăm modelele care se vând cel mai bine și propunem ajustări pentru a reduce retururile.</li>
+<li>Stocăm tiparele digital, pentru re-editări rapide sau re-comenzi neașteptate.</li>
+<li>Planificăm împreună lansările astfel încât mostrele și materialele vizuale să fie gata la timp pentru campanii.</li>
+</ul>
+<button class="btn-main open-contact">Pornim următorul sezon împreună</button>
+</div>
+</div>
+</section>
+<section id="proces" class="section section-soft">
+<div class="section-kicker">proces simplu, clar</div>
+<h2 class="section-title">Cum lucrăm cu brandul tău</h2>
+<p class="section-subtitle">De la primul mesaj până la livrarea colecției, păstrăm pașii de mai jos. Acest flux ne ajută să fim clari în așteptări, calendar și responsabilități, indiferent de mărimea proiectului.</p>
+<div class="process-grid">
+<div class="process-card">
+<div class="process-step">01</div>
+<div class="process-label">brief și estimare</div>
+<h3 class="process-title">Încadrarea proiectului</h3>
+<p class="process-text">Pornim de la fișele tehnice, referințe vizuale sau moodboard-uri și discutăm numărul de modele, materiale, termene și buget estimativ. Îți trimitem o propunere structurată cu loturi, pași și deadlines.</p>
+<p class="process-meta">În această etapă clarificăm volumele minime, tipurile de finisaje și logistica de livrare.</p>
+</div>
+<div class="process-card">
+<div class="process-step">02</div>
+<div class="process-label">mostre și testare</div>
+<h3 class="process-title">Prototipare și ajustări</h3>
+<p class="process-text">Realizăm mostrele inițiale și organizăm sesiuni de probă fizice sau remote. Notăm ajustările, actualizăm tiparele și confirmăm împreună versiunea finală a fiecărui model înainte de a lansa producția.</p>
+<p class="process-meta">Primești fotografii și video din atelier pentru aprobări rapide, fără deplasări inutile.</p>
+</div>
+<div class="process-card">
+<div class="process-step">03</div>
+<div class="process-label">producție și livrare</div>
+<h3 class="process-title">Executarea colecției</h3>
+<p class="process-text">După aprobarea mostrelor, trecem la croi și coasere în loturile agreate. Realizăm verificări de calitate pe parcurs, pregătim etichetele și împachetarea, apoi organizăm livrarea către depozitul sau magazinul tău.</p>
+<p class="process-meta">Colecția este însoțită de rapoarte de producție și recomandări pentru re-comenzi.</p>
+</div>
+</div>
+</section>
+<section id="contact" class="section section-light">
+<div class="section-kicker">hai să vorbim despre colecția ta</div>
+<h2 class="section-title">Un mesaj distanță de următorul tău drop</h2>
+<div class="contact-cta-wrapper">
+<div class="contact-phrases">
+<p>Ești în faza de idee, ai mostre parțiale sau un brand deja lansat care caută un nou partener de producție? Ne poți scrie câteva rânduri despre proiect, iar noi revenim cu o propunere realistă de calendar și buget.</p>
+<p>Preferăm mesaje cu cât mai multe detalii: tipuri de produse, număr aproximativ de modele, materiale preferate și termene ideale de lansare. Cu cât știm mai mult din start, cu atât putem să-ți oferim un răspuns clar.</p>
+<div class="contact-highlights">
+<div class="contact-highlight">Răspundem în maximum o zi lucrătoare la toate mesajele primite pe email sau prin formularul nostru.</div>
+<div class="contact-highlight">Datele transmise sunt folosite exclusiv pentru a răspunde solicitărilor tale legate de colaborare.</div>
+</div>
+</div>
+<div class="contact-actions">
+<button class="btn-main open-contact">Deschide formularul de contact</button>
+<button class="btn-ghost open-contact">Programează o discuție online</button>
+<div class="contact-actions-note">Dacă ai deja fișe tehnice sau un fișier de prezentare, menționează acest lucru în mesaj, iar noi îți vom răspunde cu instrucțiuni pentru trimiterea lor în siguranță.</div>
+<div class="contact-mini-row">
+<div class="contact-mini-tag">brief rapid în 3 minute</div>
+<div class="contact-mini-tag">fără abonament, fără spam</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-logo">
+<span>RAYSA</span>
+<div class="logo-mark"></div>
+</div>
+<div class="footer-contact">
+<div>ATELIER RAYSA DESIGN SRL</div>
+<div>Adresa: STR. VIITORULUI NR. 17E, 417498 Cihei, România</div>
+<div>Email: <a href="mailto:info@atelierraysadesign.pro">info@atelierraysadesign.pro</a></div>
+</div>
+<div class="footer-nav">
+<span>colectii</span>
+<span>atelier</span>
+<span>servicii</span>
+<span>proces</span>
+</div>
+<div class="social-row">
+<span>urmează atelierul</span>
+<div class="social-icons">
+<div class="social-icon">f</div>
+<div class="social-icon">in</div>
+<div class="social-icon">ig</div>
+</div>
+</div>
+</div>
+</footer>
+<div class="modal-overlay" id="contactModal">
+<div class="modal">
+<button class="modal-close" data-close="contactModal">×</button>
+<div class="modal-header">
+<div class="modal-kicker">scrie-ne câteva detalii</div>
+<div class="modal-title">Formular de contact pentru proiecte noi</div>
+<div class="modal-subtitle">Completează câmpurile de mai jos, iar noi îți vom răspunde cu o propunere personalizată în cel mai scurt timp.</div>
+</div>
+<form id="contactForm">
+<div class="form-grid">
+<div class="form-field">
+<label for="nume">Nume și prenume</label>
+<input id="nume" name="nume" type="text" class="form-input" required>
+</div>
+<div class="form-field">
+<label for="email">Adresa de email</label>
+<input id="email" name="email" type="email" class="form-input" required>
+</div>
+<div class="form-field">
+<label for="tipClient">Tip de client</label>
+<select id="tipClient" name="tipClient" class="form-select" required>
+<option value="">Selectează o opțiune</option>
+<option value="brandModa">Brand de modă</option>
+<option value="designerIndependent">Designer independent</option>
+<option value="companieCorporate">Companie corporate</option>
+<option value="altul">Alt tip de proiect</option>
+</select>
+</div>
+<div class="form-field">
+<label for="deadline">Termen estimat pentru lansare</label>
+<input id="deadline" name="deadline" type="text" class="form-input" placeholder="De exemplu: iunie 2026">
+</div>
+<div class="form-field form-full">
+<label for="mesaj">Descrie pe scurt colecția sau proiectul</label>
+<textarea id="mesaj" name="mesaj" class="form-textarea" required></textarea>
+</div>
+</div>
+<div class="form-footer-row">
+<div class="form-consent">
+<input id="consimtamant" type="checkbox" required>
+<label for="consimtamant">Sunt de acord ca datele trimise să fie folosite exclusiv pentru a primi un răspuns legat de solicitarea mea de colaborare.</label>
+</div>
+<div class="form-note">Nu colectăm mai multe informații decât este necesar pentru a te contacta și nu folosim datele tale în scopuri de marketing fără acordul tău explicit.</div>
+<button type="submit" class="btn-main">Trimite mesajul</button>
+</div>
+</form>
+</div>
+</div>
+<div class="modal-overlay" id="successModal">
+<div class="modal">
+<button class="modal-close" data-close="successModal">×</button>
+<div class="modal-success">
+<div class="modal-success-icon">✓</div>
+<div class="modal-success-title">Mesajul tău a fost trimis</div>
+<p class="modal-success-text">Îți mulțumim pentru interesul față de ATELIER RAYSA DESIGN SRL. Am înregistrat detaliile proiectului tău și vom reveni cu un răspuns personalizat.</p>
+<p class="modal-success-meta">De obicei răspundem în maximum o zi lucrătoare. Dacă nu primești un mesaj de la noi, verifică și folderul de spam sau scrie-ne direct la adresa <a href="mailto:info@atelierraysadesign.pro">info@atelierraysadesign.pro</a>.</p>
+</div>
+</div>
+</div>
+<script>
+var contactModal = document.getElementById("contactModal");
+var successModal = document.getElementById("successModal");
+var openButtons = document.querySelectorAll(".open-contact");
+openButtons.forEach(function(button) {
+button.addEventListener("click", function() {
+contactModal.style.display = "flex";
+});
+});
+var closeButtons = document.querySelectorAll(".modal-close");
+closeButtons.forEach(function(button) {
+button.addEventListener("click", function() {
+var targetId = this.getAttribute("data-close");
+if (targetId === "contactModal") {
+contactModal.style.display = "none";
+}
+if (targetId === "successModal") {
+successModal.style.display = "none";
+}
+});
+});
+window.addEventListener("click", function(event) {
+if (event.target === contactModal) {
+contactModal.style.display = "none";
+}
+if (event.target === successModal) {
+successModal.style.display = "none";
+}
+});
+var contactForm = document.getElementById("contactForm");
+contactForm.addEventListener("submit", function(event) {
+event.preventDefault();
+contactModal.style.display = "none";
+successModal.style.display = "flex";
+contactForm.reset();
+});
+</script>
+</body>
+</html>
